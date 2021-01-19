@@ -71,6 +71,7 @@
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.15",
     "moment": "^2.29.1",
+    "nedb": "^1.8.0",
     "ng-apexcharts": "^1.2.3",
     "ng-chartist": "^4.1.0",
     "ng-zorro-antd": "^9.3.0",

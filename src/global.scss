@@ -10,3 +10,16 @@
 
 @import 'app/components/kit/core/style'; // Clean UI KIT core styles
 @import 'app/components/cleanui/styles/style'; // Clean UI styles
+.modal-holder {
+  animation-name: example;
+  animation-duration: 0.1s;
+}
+
+@keyframes example {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -25,26 +25,25 @@ import { GoogleAnalyticsComponent } from 'src/app/pages/apps/google-analytics/go
 import { HelpdeskDashboardComponent } from 'src/app/pages/apps/helpdesk-dashboard/helpdesk-dashboard.component'
 import { WordpressPostComponent } from 'src/app/pages/apps/wordpress-post/wordpress-post.component'
 import { WordpressPostsComponent } from 'src/app/pages/apps/wordpress-posts/wordpress-posts.component'
-import { WordpressAddComponent } from 'src/app/pages/apps/wordpress-add/wordpress-add.component';
-import { PricebookComponent } from './pricebook/pricebook.component';
-import { OrderComponent } from './order/order.component';
-import { ReceiptComponent } from './receipt/receipt.component';
-import { SettingComponent } from './setting/setting.component';
-import { CustomerComponent } from './customer/customer.component';
-import { ExpensesComponent } from './expenses/expenses.component';
-import { UrbanpiperComponent } from './urbanpiper/urbanpiper.component';
-import { UpdaterComponent } from './updater/updater.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { ReportComponent } from './report/report.component';
-import { ElectronService } from 'ngx-electron';
+import { WordpressAddComponent } from 'src/app/pages/apps/wordpress-add/wordpress-add.component'
+import { PricebookComponent } from './pricebook/pricebook.component'
+import { OrderComponent } from './order/order.component'
+import { ReceiptComponent } from './receipt/receipt.component'
+import { SettingComponent } from './setting/setting.component'
+import { CustomerComponent } from './customer/customer.component'
+import { ExpensesComponent } from './expenses/expenses.component'
+import { UrbanpiperComponent } from './urbanpiper/urbanpiper.component'
+import { UpdaterComponent } from './updater/updater.component'
+import { AboutusComponent } from './aboutus/aboutus.component'
+import { ReportComponent } from './report/report.component'
+import { ElectronService } from 'ngx-electron'
 
 // import { FilterPipe, CategoryPipe, MultiFilterPipe, ExcludeFilterPipe } from '../../shared/order.filter.pipe';
 
 // import { MomentPipe } from '../../shared/moment.pipe';
 
 // import { ReceiptsComponent } from './receipts/receipts.component';
-
-
+import { OrderfilterPipe, ProductfilterPipe } from '../../pipes/order/orderfilter.pipe'
 
 const COMPONENTS = [
   AppsMessagingComponent,
@@ -64,8 +63,8 @@ const COMPONENTS = [
   WordpressPostComponent,
   WordpressPostsComponent,
   WordpressAddComponent,
-  
-  
+  OrderfilterPipe,
+  ProductfilterPipe,
 ]
 
 @NgModule({
@@ -78,10 +77,20 @@ const COMPONENTS = [
     QuillModule.forRoot(),
     SortablejsModule,
     NestableModule,
-   
-    
   ],
-  declarations: [...COMPONENTS, PricebookComponent, OrderComponent, ReceiptComponent, SettingComponent, CustomerComponent, ExpensesComponent, UrbanpiperComponent, UpdaterComponent, AboutusComponent, ReportComponent],
-  providers: [ElectronService]
+  declarations: [
+    ...COMPONENTS,
+    PricebookComponent,
+    OrderComponent,
+    ReceiptComponent,
+    SettingComponent,
+    CustomerComponent,
+    ExpensesComponent,
+    UrbanpiperComponent,
+    UpdaterComponent,
+    AboutusComponent,
+    ReportComponent,
+  ],
+  providers: [ElectronService],
 })
 export class AppsModule {}
